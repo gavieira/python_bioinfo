@@ -1,0 +1,8 @@
+ERR1306022	Species1
+RR7295165	Species2
+ERR1306034	Species3
+SRR4409513	Species4
+
+#The sra_download.py script works by reading a text file (list of sra datasets) that should contain two collumns using tab as separators: Accession number and species name, as represented above
+#Before using, please install the "wget" module: $> pip install wget
+#Script usage: python3 sra_download.py dataset_list.txt
