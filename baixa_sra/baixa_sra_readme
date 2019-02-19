@@ -1,7 +1,0 @@
-ERR1306022	Species1
-RR7295165	Species2
-ERR1306034	Species3
-SRR4409513	Species4
-#O baixa_sra.py só funciona lendo um arquivo de texto (lista de datasets) que deve ter duas colunas separadas por tabulação: Accession number e nome da espécie, que nem acima.
-#Antes de usar, instale o módulo "wget" do python: $> pip install wget
-#Uso do script: python3 baixa_sra.py lista_de_datasets.txt

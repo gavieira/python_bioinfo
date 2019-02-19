@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
 import argparse
-parser = argparse.ArgumentParser(description="Prints contigs larger than a specified length in bp", epilog="'With great power comes great responsibility' -- Stan Lee (1922-2018)")
+parser = argparse.ArgumentParser(description="Prints contigs larger than a specified length in bp")
 group = parser.add_mutually_exclusive_group()
-#group.add_argument("-m", "--minlen", type=int, metavar="", default=False, help="Get all contigs longer than this value")
 group.add_argument("-c", "--count", action="store_true", default=False, help="Get a list of all contigs and their size")
 group.add_argument("-a", "--acc", type=str, metavar="", default=False, help="Get a single contig by ID (please provide description line without '>')")
 group.add_argument("-r", "--range", type=str, metavar="", default=False, help="Get sequence of all contigs inside a min-max length. Please provide the lower and upper limits such as '12000-18000'")
@@ -39,17 +38,6 @@ def get_seq_by_acc(header): ###Gets a sequence from the multifasta using its hea
     fasta_list = dict(split_multifasta(args.infile)) ##Converts list into dictionary
     return [header, fasta_list.get(header)]     ##Returns a list with the key-value pair. A "try - except" here would be nice.
 
-'''
-def get_seq_by_length(minlen): ###Gets all sequences longer than integer value of "--minlen" flag
-    fasta_len = split_multifasta(args.infile)
-    fasta_greater = []
-    i = 0
-    while len(fasta_len[i][1]) > minlen and i < len(fasta_len):
-        fasta_greater.append(fasta_len[i])
-        i += 1
-    return fasta_greater
-'''
-
 def get_seq_in_range(contig_length_range): ###Generates a list of tuples with all contigs in the delimited size range
     fasta_len = split_multifasta(args.infile)
     contig_range = contig_length_range.split("-")
@@ -73,13 +61,6 @@ if args.count:
 if args.acc:
     seq = get_seq_by_acc(args.acc)
     print(">%s\n%s" % (seq[0], seq[1]))
-
-'''
-if args.minlen:
-    fasta_greater = get_seq_by_length(args.minlen)
-    for i in range(len(fasta_greater)):
-        print(">%s\n%s" % (fasta_greater[i][0], fasta_greater[i][1]))
-'''
 
 if args.range:
     contigs_in_range = get_seq_in_range(args.range)

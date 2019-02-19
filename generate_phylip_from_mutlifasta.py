@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
-parser = argparse.ArgumentParser(description="Generates a 'phylip' alignment for PartitionFinder")
+parser = argparse.ArgumentParser(description="Generates a 'phylip' alignment for PartitionFinder2")
 parser.add_argument("-t", "--type", type=str, metavar="", default="DNA", help="Type of data: {Protein, RNA or DNA(default)}")
 parser.add_argument("infile", type=str, metavar="infile", help="Path to fasta file")
 args = parser.parse_args()

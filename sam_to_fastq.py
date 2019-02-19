@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
 
-
 import argparse
-parser = argparse.ArgumentParser(description="Extracts fastq from sam files", epilog="'With great power comes great responsibility' -- Stan Lee (1922-2018)")
-#group = parser.add_mutually_exclusive_group()
-#group.add_argument("-m", "--minlen", type=int, metavar="", default=False, help="Get all contigs longer than this value")
-#parser.add_argument("-U", "--unique", type=str, action="store_true", default=False, help="For single-end data")
+parser = argparse.ArgumentParser(description="Extracts fastq from sam files")
 parser.add_argument("-P", "--paired", action="store_true", default=False, help="Generates two paired-end data files (unpaired reads included)")
-#group.add_argument("-r", "--range", type=str, metavar="", default=False, help="Get sequence of all contigs inside a min-max length. Please provide the lower and upper limits such as '12000-18000'")
 parser.add_argument("infile", type=str, metavar="infile", help="Path to sam file")
 args = parser.parse_args()
 
