@@ -1,0 +1,4 @@
+#Jupyter notebooks used to write the code
+jupyter/
+.ipynb_checkpoints/
+teste/
