@@ -97,3 +97,7 @@ Script usage:
 ```
 sra_download.py dataset_list.txt
 ```
+
+## split_multigenbank.py
+
+Splits a multigenbank in individual records, generating a genbank file (name_of_species.gb) for each.
