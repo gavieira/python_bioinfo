@@ -7,7 +7,7 @@ Python scripts for bioinformatics data manipulation
 Gets contig information from a multifasta file. Has to be used with one of three options (-c, -a, -r):
 
 ```
-usage: extract_large_contigs.py [-h] [-c | -a  | -r ] infile
+usage: python3 extract_large_contigs.py [-h] [-c | -a  | -r ] infile
 
 -c, --count    Get a list of all contigs and their size
 -a , --acc     Get a single contig by ID (please provide description line without '>')
@@ -21,7 +21,7 @@ usage: extract_large_contigs.py [-h] [-c | -a  | -r ] infile
 Converts a single genbank file to fasta, printing its output to the screen.
 
 ```
-usage: gb_to_fa.py sequence.gb
+usage: python3 gb_to_fa.py sequence.gb
 ```
 <br>
 
@@ -34,7 +34,7 @@ The phylip alignment output can be used for the generation of phylogenetic/phylo
 This scripts only works with sequences that are less than 1 Gbp in size.
 
 ```
-usage: generate_phylip_from_mutlifasta.py [-h] [-t] multifasta.fa
+usage: python3 generate_phylip_from_mutlifasta.py [-h] [-t] multifasta.fa
 
 optional arguments:
   -h, --help    show this help message and exit
@@ -56,7 +56,7 @@ usage: python3 mitos_to_artemis.py filename.gff
 Removes "score" values present in the annotation of [MitosWebServer](http://mitos.bioinf.uni-leipzig.de/index.py). The removal of the score values from seqin files is necessary in order to submit mitochondrial sequences to genbank.
 
 ```
-usage: remove_score_seqin annotated_sequence.seqin
+usage: python3 remove_score_seqin annotated_sequence.seqin
 ```
 <br>
 
@@ -65,7 +65,7 @@ usage: remove_score_seqin annotated_sequence.seqin
 Extracts reads (in fastq format) from a sam file.
 
 ```
-usage: sam_to_fastq.py [-h] [-P] file.sam
+usage: python3 sam_to_fastq.py [-h] [-P] file.sam
 
 optional arguments:
   -h, --help    show this help message and exit
@@ -95,9 +95,15 @@ pip install wget
 Script usage:
 
 ```
-sra_download.py dataset_list.txt
+python3 sra_download.py dataset_list.txt
 ```
 
 ## split_multigenbank.py
 
 Splits a multigenbank in individual records, generating a genbank file (name_of_species.gb) for each.
+
+Script usage:
+
+```
+python3 split_multigenbank.py multirecord_file.gb
+```
