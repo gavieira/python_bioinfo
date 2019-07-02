@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 
-import sys
+import sys, re
 filename = sys.argv[-1]
 with open(filename) as gb:
     seq = ""
-    nucl = ("a", "c", "g", "t", "n")
     accession = gb.readline().split()[1]
     description = gb.readline().rstrip().split(" ", 1)[-1]
     head = "> %s |%s " % (accession, description)
     while "ORIGIN" not in gb.readline():
         continue
     for line in gb:
-        for char in line:
-            if char in nucl:
-                seq += char
+        nucl_match = re.search('^\s+\d+\s+(.+)$', line, re.IGNORECASE)
+        if nucl_match:
+            nucl = nucl_match.group(1).replace(" ", "")
+            seq += nucl
     print(head)
     print(seq)
