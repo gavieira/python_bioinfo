@@ -13,6 +13,6 @@ with open(filename) as gb:
         nucl_match = re.search('^\s+\d+\s+(.+)$', line, re.IGNORECASE)
         if nucl_match:
             nucl = nucl_match.group(1).replace(" ", "")
-            seq += nucl
+            seq += nucl + "\n"
     print(head)
     print(seq)
