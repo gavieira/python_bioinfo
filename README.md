@@ -15,7 +15,7 @@ positional arguments:
 
 optional arguments:
   -h, --help   show this help message and exit
-  -f, --fasta  Downloads records in fasta format (default: downloads records in genbank)
+  -f, --fasta  Downloads records in fasta format (default: genbank)
 ```
 
 ## extract_large_contigs.py
