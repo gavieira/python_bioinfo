@@ -2,6 +2,22 @@ Python scripts for bioinformatics data manipulation
 ====================================================================
 <br>
 
+
+## mitodownloader.py
+
+Downloads all RefSeq mitogenome records available for a given taxon
+
+```
+usage: mitodownloader.py [-h] [-f] TAXON_NAME
+
+positional arguments:
+  TAXON_NAME        Taxon name
+
+optional arguments:
+  -h, --help   show this help message and exit
+  -f, --fasta  Downloads records in fasta format (default: downloads records in genbank)
+```
+
 ## extract_large_contigs.py
 
 Gets contig information from a multifasta file. Has to be used with one of three options (-c, -a, -r):
