@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[33]:
-
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # mitodownloader.py
@@ -14,8 +8,9 @@ __author__ = "Gabriel Alves Vieira"
 __contact__ = "gabrieldeusdeth@gmail.com"
 
 
-#This script:
 #https://www.ncbi.nlm.nih.gov/genome/browse#!/organelles - Use this URL to search manually for mitogenomes of a specific taxon
+
+#This script:
 #Downloads the csv containing the species and accession (other metadata included) of all RefSeq mitogenomes for the taxon
 #Uses that information to download all mitogenomes (Using the Entrez module from Biopython)
 
@@ -27,8 +22,8 @@ from Bio import Entrez
 
 
 parser = argparse.ArgumentParser(description="Downloads all RefSeq mitogenome records available for a given taxon")
-parser.add_argument("-f", "--fasta", action="store_true", default=False, help="Downloads records in fasta format (default: downloads records in genbank)")
-parser.add_argument("taxon", type=str, metavar="TAXON", help="Taxon name")
+parser.add_argument("-f", "--fasta", action="store_true", default=False, help="Downloads records in fasta format (default: genbank)")
+parser.add_argument("taxon", type=str, metavar="TAXON", help="Name of taxon of interest (only name, taxid won't work)")
 args = parser.parse_args()
 
 
@@ -52,9 +47,9 @@ with open(mitos_csv) as csvfile:
         species = line[0].replace(" ", "_")
         accession = line[8].split("/")[0] #There may be unformatted accessions (e.g. "MT:NC_014672.1")
         formatted_accession = re.search('^.*(NC_\d+\.\d).*$', accession)
-        accession = formatted_accession.group(1) #So the valid accession will be pulled out using a regex extration group
-        records_dict[species] = accession
-    print(records_dict)
+        if formatted_accession:
+            accession = formatted_accession.group(1)#So the valid accession will be pulled out using a regex extration group
+            records_dict[species] = accession
 
 
 
@@ -62,7 +57,6 @@ def entrez_download(output_filename, accession, seq_format = "gb"):
     '''Downloads records from NCBI's nucleotide database.
     seq_format can be either "fasta" or "gb"(default)'''
     with open(output_filename, "w+") as record:
-        print(output_filename, accession, seq_format)
         handle = Entrez.efetch(db='nucleotide', id=accession, rettype=seq_format, retmode='text')
         record.write(handle.read())
 
