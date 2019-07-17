@@ -19,12 +19,11 @@ def write_CDSs_to_file():
 def extract_CDS(genbank):
     CDS_list = list()
     for record in SeqIO.parse(genbank, "genbank"):
-        if record.features:
-            for FEATURE in record.features:
-                if FEATURE.type == "CDS":
-                    header = FEATURE.qualifiers.get("gene")[0]
-                    sequence = FEATURE.location.extract(record).seq
-                    CDS_list.append(">{}\n{}\n".format(header, sequence))
+        for FEATURE in record.features:
+            if FEATURE.type == "CDS":
+                header = FEATURE.qualifiers.get("gene")[0]
+                sequence = FEATURE.location.extract(record).seq
+                CDS_list.append(">{}\n{}\n".format(header, sequence))
     return(CDS_list)
 
 if __name__ == "__main__":
