@@ -12,7 +12,7 @@ args = parser.parse_args()
 def write_CDSs_to_file():
     for i in args.genbank:
         with open ("{}.CDS.fa".format(i.rsplit(".", 1)[0]), "w") as CDS:
-            coding_list = extract_CDS("Allenopithecus_nigroviridis_NC_023965.1.gb")
+            coding_list = extract_CDS(i)
             for i in coding_list:
                 CDS.write(i)
 
