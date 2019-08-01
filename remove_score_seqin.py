@@ -12,5 +12,4 @@ with open(filename) as seqin:
         if line.strip().startswith("score"):
             continue
         else:
-            print(line)
-
+            print(line, end='')

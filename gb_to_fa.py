@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 import sys, re
+
 filename = sys.argv[-1]
+
 with open(filename) as gb:
     seq = ""
     accession = gb.readline().split()[1]

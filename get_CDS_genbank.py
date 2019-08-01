@@ -2,7 +2,6 @@
 # coding: utf-8
 
 from Bio import SeqIO
-import re
 import argparse
 
 parser = argparse.ArgumentParser(description="This script extracts CDS sequences from genbank files")
