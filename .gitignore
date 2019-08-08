@@ -1,4 +1,6 @@
-#Ignores test files and Jupyter Notebooks
+#Ignores test files, folders and Jupyter Notebooks
 .ipynb_checkpoints/
 teste/
+pairwise_align_features/
+pairwise_alignment/
 *.ipynb

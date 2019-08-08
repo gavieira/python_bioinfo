@@ -5,7 +5,7 @@ from Bio import SeqIO
 import csv
 import argparse
 
-parser = argparse.ArgumentParser(description="This script counts calculates codon usage for CDSs in genbank files")
+parser = argparse.ArgumentParser(description="This script calculates codon usage for CDSs in genbank files")
 parser.add_argument("genbank", type=str, metavar="genbank", nargs='*', help="Genbank file(s)")
 args = parser.parse_args()
 
