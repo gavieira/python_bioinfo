@@ -3,6 +3,10 @@ Python scripts for bioinformatics data manipulation
 <br>
 
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3542103.svg)](https://doi.org/10.5281/zenodo.3542103)
+
+
+
 ## mitodownloader.py
 
 Downloads all RefSeq mitogenome records available for a given taxon
