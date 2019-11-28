@@ -18,6 +18,7 @@ class trinotate_sql_parser:
         self.id = self.data['id']
         self.description = self.data['description']
         self.seq = self.data['seq']
+        
         self.fasta = self.convert_to_fasta()
 
     def database_query(self):
@@ -61,12 +62,16 @@ class trinotate_sql_parser:
         for i in self.fasta:
             print(i)        
 
-if __name__ == "__main__":
+def argparse_run():
     parser = argparse.ArgumentParser(description="This script searches and extracts all occurrences of a gene from a Trinotate sqlite database")
     required = parser.add_argument_group("Required arguments")
+    parser.add_argument("-t", "--translate", action="store_true", default=False, help="Automatically translates fasta sequences from nt to aa")
     parser.add_argument("-g", "--gene", type=str, metavar="gene", required=True, help="Gene name. (i.e. 'COX1')")
     parser.add_argument("sqlite", type=str, metavar="sqlite", help="Database file")
+    global args
     args = parser.parse_args()
-    
+
+if __name__ == "__main__":
+    argparse_run()
     mygenes = trinotate_sql_parser(args.gene, args.sqlite)
     mygenes.print_fasta()
