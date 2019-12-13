@@ -34,18 +34,20 @@ class orthodb_fa2sqlite:
         connection = sqlite3.connect(self.db)
         cursor = connection.cursor()
         cursor.execute("CREATE TABLE IF NOT EXISTS orthodb (\
-                        fasta_id TEXT UNIQUE NOT NULL,\
-                        description TEXT,\
-                        pub_gene_id TEXT,\
-                        pub_og_id TEXT,\
-                        og_name TEXT,\
-                        seq_size INTEGER,\
-                        level INTEGER,\
-                        seq TEXT NOT NULL\
-                        );")
+        fasta_id TEXT UNIQUE NOT NULL,\
+        description TEXT,\
+        pub_gene_id TEXT,\
+        pub_og_id TEXT,\
+        og_name TEXT,\
+        seq_size INTEGER,\
+        level INTEGER,\
+        seq TEXT NOT NULL\
+        );")
         for rec in self.seqio_parser():
             values = self.extract_values(rec)
-            cursor.execute("INSERT INTO orthodb                        (fasta_id, description, pub_gene_id, pub_og_id, og_name, seq_size, level, seq)                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)", values)
+            cursor.execute("INSERT INTO orthodb\
+            (fasta_id, description, pub_gene_id, pub_og_id, og_name, seq_size, level, seq)\
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)", values)
         cursor.close()
         connection.commit()
         connection.close()                       
