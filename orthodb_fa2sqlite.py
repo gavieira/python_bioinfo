@@ -9,7 +9,7 @@ class orthodb_fa2sqlite:
     def __init__(self, fasta):
         self.fasta = fasta
         self.seqio = SeqIO.parse(self.fasta, 'fasta')
-        self.db = "{}.db".format(os.path.splitext(self.fasta)[0])
+        self.db = "{}.sqlite".format(os.path.splitext(self.fasta)[0])
         self.columns = ['fasta_id', 'description', 'pub_gene_id', 'pub_og_id', 'og_name', 'seq_size', 'level', 'seq']
     
     

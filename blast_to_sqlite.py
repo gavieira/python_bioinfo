@@ -8,7 +8,7 @@ class blast_to_fasta:
     def __init__(self, fasta, overwrite=False):
         self.blast = fasta
         self.overwrite = overwrite
-        self.db = "{}.db".format(os.path.splitext(self.blast)[0])
+        self.db = "{}.sqlite".format(os.path.splitext(self.blast)[0])
         self.columns = ('query_id', 'subject_id', 'identity', 'alignment_size', 'mismatches', 'gaps', 'query_begin', 'query_end', 'subject_begin', 'subject_end', 'evalue', 'score')    
     
     def extract_blast_fields(self):
