@@ -26,7 +26,7 @@ class orthodb_fa2sqlite:
     def extract_values(self, dictionary):
         values = list()
         for key in self.columns:
-            try: values.append(dictionary[key])
+            try: values.append(dictionary[key]) #The dict.get() method allows the retrieval with default value if not is found. Could be used to remove this try/except.
             except: values.append(None)
         return values
     
