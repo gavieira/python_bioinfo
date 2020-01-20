@@ -16,9 +16,10 @@ class mitoannotation():
     def __init__(self, fasta_file, refdir, gencode=2):
         self.fasta = fasta_file
         self.gbk = "{}.gbk".format(os.path.splitext(self.fasta)[0])
+        self.results = "{}_mitos".format(os.path.splitext(self.fasta)[0])
         self.gencode = gencode
         self.refdir = refdir
-        self.bed_file = "./mitos_results/result.bed"
+        self.bed_file = "{}/result.bed".format(self.results)
         self.feat_dict = {
         "cox1": {"name" : "COX1", "product" : "cytochrome c oxidase subunit I"},
         "cox2": {"name": "COX2", "product": "cytochrome c oxidase subunit II"},
@@ -63,29 +64,30 @@ class mitoannotation():
         self.trna_list = [x for x in self.feat_dict.keys() if x.startswith("trn")]
         self.rrna_list = [x for x in self.feat_dict.keys() if x.startswith("rrn")]
         
-    
     def check_mitos_results(self):
         if os.path.isfile(self.bed_file):
             return True
         else:
-            if os.path.isdir("mitos_results"):
-                shutil.rmtree("mitos_results")
-            os.mkdir("mitos_results")
+            if os.path.isdir(self.results):
+                shutil.rmtree(self.results)
+            os.mkdir(self.results)
             return False
 
 
-    def run_mitos(self): ##Is MITOS1 better?
+    def run_mitos(self):
         if not self.check_mitos_results():
-            print("Running MITOS...")
-            mitos = subprocess.run(["runmitos.py", "-i", self.fasta, "-c", str(self.gencode), "-o", "mitos_results", "-r", self.refdir, "--linear", "--ncbicode", "--noplots", "--best", "--alarab", "--intron", "0", "--oril", "0", "--orih", "0"])
+            print("Running MITOS for file {}...".format(self.fasta))
+            mitos = subprocess.run(["runmitos.py", "-i", self.fasta, "-c", str(self.gencode), "-o", self.results, "-r", self.refdir, "--linear", "--ncbicode", "--noplots", "--best", "--alarab", "--intron", "0", "--oril", "0", "--orih", "0"])
             #print("Finished MITOS with exit status {}".format(str(mitos.returncode)))
-        else: pass
-            #print("Annotation process already finished. Skipping to generation of genbank file...")
+        else:
+            print("Annotation process already finished. Skipping to generation of genbank file (if any)...")
 
 
     def generate_gbk(self):
+        print("Generating file {}...".format(self.gbk))
         with open(self.gbk, "w") as gbk:
             gbk.write(self.format_features() + self.format_sequence())
+        print("{} successfully created!".format(self.gbk))
 
     def format_features(self):
         formatted_feats = ''
@@ -139,8 +141,6 @@ class mitoannotation():
             product = self.feat_dict.get(feat_name).get("product")
             feat_type = 'CDS'
         return (final_feat_name, feat_type, product, anticodon)
-            
-        
 
 import argparse, traceback
 
@@ -150,17 +150,18 @@ def getArgs():
     parser.add_argument("-k", "--keep", action="store_true", default=False, help="Keeps MITOS annotation files. Default: False")
     parser.add_argument("-c", "--gencode", type=int, metavar="GENETIC CODE", default=2, help="NCBI's codon table. Default: 2 (Vertebrate Mitochondrial)")
     parser.add_argument("-r", "--refdir", type=str, metavar="REFERENCE DATA", default=default_refdir, help="Custom path to RefSeq63m directory (downloadable from https://zenodo.org/record/2672835). Default: {}".format(default_refdir))
-    parser.add_argument("fasta", type=str, metavar="FASTA", help="Fasta file to be annotated")
+    parser.add_argument("fasta", type=str, nargs="*", metavar="FASTA", help="Fasta file(s) to be annotated")
     return parser.parse_args()
 
 if __name__ == "__main__":
     args = getArgs()
     try:
-        annotation = mitoannotation(args.fasta, args.refdir, gencode=args.gencode)
-        annotation.run_mitos()
-        annotation.generate_gbk()
-        if not args.keep:
-            shutil.rmtree("mitos_results")            
+        for fasta in args.fasta:
+            annotation = mitoannotation(fasta, args.refdir, gencode=args.gencode)
+            annotation.run_mitos()
+            annotation.generate_gbk()
+            if not args.keep:
+                shutil.rmtree(annotation.results)
     except Exception as error:
         fullerror = traceback.format_exc()
-        print("An error has occurred for this annotation process: {}\n\nFULL ERROR:\n\n{}".format(error, fullerror))
+        print("An error has occurred for this annotation/gbk conversion process: {}\n\nFULL ERROR:\n\n{}".format(error, fullerror))
