@@ -77,8 +77,19 @@ class mitoannotation():
     def run_mitos(self):
         if not self.check_mitos_results():
             print("Running MITOS for file {}...".format(self.fasta))
-            mitos = subprocess.run(["runmitos.py", "-i", self.fasta, "-c", str(self.gencode), "-o", self.results, "-r", self.refdir, "--linear", "--ncbicode", "--noplots", "--best", "--alarab", "--intron", "0", "--oril", "0", "--orih", "0"])
-            #print("Finished MITOS with exit status {}".format(str(mitos.returncode)))
+            with open("mitos.out", "w+") as output, open('mitos.err', 'w+') as error:
+                mitos = subprocess.run(["runmitos.py", "-i", self.fasta, "-c", str(self.gencode), "-o", self.results, "-r", self.refdir, "--linear", "--ncbicode", "--noplots", "--best", "--alarab", "--intron", "0", "--oril", "0", "--orih", "0"], stdout=output, stderr=error)                
+                print("Finished MITOS with exit status {}".format(str(mitos.returncode)))
+                output.seek(0)
+                missing_feat = False
+                for line in output:
+                    if line.startswith("missing:"):
+                        missing_feat = True
+                        print('WARNING - {}'.format(line))
+                if not missing_feat:
+                    print("All features were succesfully annotated")
+            os.remove("mitos.out")
+            os.remove("mitos.err")
         else:
             print("Annotation process already finished. Skipping to generation of genbank file (if any)...")
 
