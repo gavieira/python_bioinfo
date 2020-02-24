@@ -27,10 +27,14 @@ class trinotate_sql_parser:
         conn = sqlite3.connect(self.sqlite)
         with conn:
             c = conn.cursor()
-            gene_name = "%{}%".format(self.gene)
-            c.execute("""SELECT transcript_id, annotation, sequence
-                        FROM Transcript
-                        WHERE annotation LIKE ?;""", (gene_name,))
+            if self.gene:
+                gene_name = "%{}%".format(self.gene)
+                c.execute("""SELECT transcript_id, annotation, sequence
+                            FROM Transcript
+                            WHERE annotation LIKE ?;""", (gene_name,))
+            else:
+                c.execute("""SELECT transcript_id, annotation, sequence
+                            FROM Transcript""")
         return c.fetchall()
 
     def database_parser(self):
@@ -64,9 +68,7 @@ class trinotate_sql_parser:
 
 def argparse_run():
     parser = argparse.ArgumentParser(description="This script searches and extracts all occurrences of a gene from a Trinotate sqlite database")
-    required = parser.add_argument_group("Required arguments")
-    parser.add_argument("-t", "--translate", action="store_true", default=False, help="Automatically translates fasta sequences from nt to aa")
-    parser.add_argument("-g", "--gene", type=str, metavar="gene", required=True, help="Gene name. (i.e. 'COX1')")
+    parser.add_argument("-g", "--gene", type=str, metavar="gene", default='', help="Gene name. (i.e. 'COX1'). Will extract every seq from database if not specified")
     parser.add_argument("sqlite", type=str, metavar="sqlite", help="Database file")
     global args
     args = parser.parse_args()
