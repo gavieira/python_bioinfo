@@ -19,6 +19,10 @@ class pdb_atom_2_fasta():
                     seq += line.split()[3][:3].capitalize() #Ignore signals after 3rd aa letter
             return(header, seq)
     
+    def check_seq(self):
+        if self.parsed[1]:
+            return True
+
     def generate_fasta1(self):
         return(">{}\n{}".format(self.parsed[0], seq1(self.parsed[1])))
     
@@ -36,8 +40,9 @@ def getArgs():
 if __name__=='__main__':
     args = getArgs()
     for i in args.pdb:
-        if args.three_letter:
-            print(pdb_atom_2_fasta(i).generate_fasta3())
-        else:
-            print(pdb_atom_2_fasta(i).generate_fasta1())
-
+        pdb_parser = pdb_atom_2_fasta(i)
+        if pdb_parser.check_seq():
+            if args.three_letter:
+                print(pdb_atom_2_fasta(i).generate_fasta3())
+            else:
+                print(pdb_atom_2_fasta(i).generate_fasta1())
