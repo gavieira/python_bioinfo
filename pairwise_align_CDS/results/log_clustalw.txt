@@ -1,0 +1,546 @@
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_ATP6       680 bp
+Sequence 2: 1_ATP6       680 bp
+Sequence 3: 2_ATP6       681 bp
+Sequence 4: 3_ATP6       681 bp
+Sequence 5: 4_ATP6       681 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  98
+Sequences (1:3) Aligned. Score:  98
+Sequences (1:4) Aligned. Score:  89
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  89
+Sequences (2:5) Aligned. Score:  98
+Sequences (3:4) Aligned. Score:  89
+Sequences (3:5) Aligned. Score:  98
+Sequences (4:5) Aligned. Score:  88
+Guide tree file created:   [results/ATP6.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:12901
+Group 2: Sequences:   3      Score:12806
+Group 3: Sequences:   4      Score:12791
+Group 4: Sequences:   5      Score:12053
+Alignment Score 49744
+firstres = 1 lastres = 681
+FASTA file created!
+
+Fasta-Alignment file created    [results/ATP6_nuc.aln]
+
+results/ATP6.fasta clustalw2 -INFILE=results/ATP6.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/ATP6_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_COX1      1602 bp
+Sequence 2: 1_COX1      1602 bp
+Sequence 3: 2_COX1      1602 bp
+Sequence 4: 3_COX1      1602 bp
+Sequence 5: 4_COX1      1602 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  98
+Sequences (1:3) Aligned. Score:  98
+Sequences (1:4) Aligned. Score:  91
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  92
+Sequences (2:5) Aligned. Score:  99
+Sequences (3:4) Aligned. Score:  91
+Sequences (3:5) Aligned. Score:  99
+Sequences (4:5) Aligned. Score:  91
+Guide tree file created:   [results/COX1.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:30371
+Group 2: Sequences:   3      Score:30347
+Group 3: Sequences:   4      Score:30181
+Group 4: Sequences:   5      Score:28974
+Alignment Score 114475
+firstres = 1 lastres = 1602
+FASTA file created!
+
+Fasta-Alignment file created    [results/COX1_nuc.aln]
+
+results/COX1.fasta clustalw2 -INFILE=results/COX1.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/COX1_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_ND4L       290 bp
+Sequence 2: 1_ND4L       290 bp
+Sequence 3: 2_ND4L       291 bp
+Sequence 4: 3_ND4L       291 bp
+Sequence 5: 4_ND4L       291 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  99
+Sequences (1:3) Aligned. Score:  98
+Sequences (1:4) Aligned. Score:  93
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  92
+Sequences (2:5) Aligned. Score:  98
+Sequences (3:4) Aligned. Score:  91
+Sequences (3:5) Aligned. Score:  98
+Sequences (4:5) Aligned. Score:  92
+Guide tree file created:   [results/ND4L.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:5491
+Group 2: Sequences:   3      Score:5481
+Group 3: Sequences:   4      Score:5467
+Group 4: Sequences:   5      Score:5277
+Alignment Score 20240
+firstres = 1 lastres = 291
+FASTA file created!
+
+Fasta-Alignment file created    [results/ND4L_nuc.aln]
+
+results/ND4L.fasta clustalw2 -INFILE=results/ND4L.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/ND4L_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_ND6        522 bp
+Sequence 2: 1_ND6        522 bp
+Sequence 3: 2_ND6        522 bp
+Sequence 4: 3_ND6        522 bp
+Sequence 5: 4_ND6        522 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  96
+Sequences (1:3) Aligned. Score:  96
+Sequences (1:4) Aligned. Score:  86
+Sequences (1:5) Aligned. Score:  97
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  86
+Sequences (2:5) Aligned. Score:  97
+Sequences (3:4) Aligned. Score:  86
+Sequences (3:5) Aligned. Score:  97
+Sequences (4:5) Aligned. Score:  85
+Guide tree file created:   [results/ND6.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:9908
+Group 2: Sequences:   3      Score:9789
+Group 3: Sequences:   4      Score:9772
+Group 4: Sequences:   5      Score:9153
+Alignment Score 30299
+firstres = 1 lastres = 522
+FASTA file created!
+
+Fasta-Alignment file created    [results/ND6_nuc.aln]
+
+results/ND6.fasta clustalw2 -INFILE=results/ND6.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/ND6_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_ND5       1782 bp
+Sequence 2: 1_ND5       1782 bp
+Sequence 3: 2_ND5       1782 bp
+Sequence 4: 3_ND5       1788 bp
+Sequence 5: 4_ND5       1782 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  98
+Sequences (1:3) Aligned. Score:  98
+Sequences (1:4) Aligned. Score:  88
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  87
+Sequences (2:5) Aligned. Score:  99
+Sequences (3:4) Aligned. Score:  87
+Sequences (3:5) Aligned. Score:  99
+Sequences (4:5) Aligned. Score:  87
+Guide tree file created:   [results/ND5.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:33791
+Group 2: Sequences:   3      Score:33720
+Group 3: Sequences:   4      Score:33493
+Group 4: Sequences:   5      Score:31363
+Alignment Score 125155
+firstres = 1 lastres = 1788
+FASTA file created!
+
+Fasta-Alignment file created    [results/ND5_nuc.aln]
+
+results/ND5.fasta clustalw2 -INFILE=results/ND5.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/ND5_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_COX3       784 bp
+Sequence 2: 1_COX3       784 bp
+Sequence 3: 2_COX3       784 bp
+Sequence 4: 3_COX3       784 bp
+Sequence 5: 4_COX3       784 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  98
+Sequences (1:3) Aligned. Score:  98
+Sequences (1:4) Aligned. Score:  93
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  92
+Sequences (2:5) Aligned. Score:  99
+Sequences (3:4) Aligned. Score:  92
+Sequences (3:5) Aligned. Score:  99
+Sequences (4:5) Aligned. Score:  92
+Guide tree file created:   [results/COX3.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:14877
+Group 2: Sequences:   3      Score:14839
+Group 3: Sequences:   4      Score:14794
+Group 4: Sequences:   5      Score:14297
+Alignment Score 56828
+firstres = 1 lastres = 784
+FASTA file created!
+
+Fasta-Alignment file created    [results/COX3_nuc.aln]
+
+results/COX3.fasta clustalw2 -INFILE=results/COX3.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/COX3_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_COX2       685 bp
+Sequence 2: 1_COX2       685 bp
+Sequence 3: 2_COX2       685 bp
+Sequence 4: 3_COX2       685 bp
+Sequence 5: 4_COX2       685 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  97
+Sequences (1:3) Aligned. Score:  97
+Sequences (1:4) Aligned. Score:  92
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  92
+Sequences (2:5) Aligned. Score:  99
+Sequences (3:4) Aligned. Score:  92
+Sequences (3:5) Aligned. Score:  99
+Sequences (4:5) Aligned. Score:  92
+Guide tree file created:   [results/COX2.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:12996
+Group 2: Sequences:   3      Score:12967
+Group 3: Sequences:   4      Score:12850
+Group 4: Sequences:   5      Score:12471
+Alignment Score 50206
+firstres = 1 lastres = 685
+FASTA file created!
+
+Fasta-Alignment file created    [results/COX2_nuc.aln]
+
+results/COX2.fasta clustalw2 -INFILE=results/COX2.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/COX2_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_ND1        961 bp
+Sequence 2: 1_ND1        961 bp
+Sequence 3: 2_ND1        961 bp
+Sequence 4: 3_ND1        961 bp
+Sequence 5: 4_ND1        961 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  97
+Sequences (1:3) Aligned. Score:  97
+Sequences (1:4) Aligned. Score:  89
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  88
+Sequences (2:5) Aligned. Score:  98
+Sequences (3:4) Aligned. Score:  88
+Sequences (3:5) Aligned. Score:  98
+Sequences (4:5) Aligned. Score:  89
+Guide tree file created:   [results/ND1.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:18221
+Group 2: Sequences:   3      Score:18135
+Group 3: Sequences:   4      Score:18053
+Group 4: Sequences:   5      Score:17090
+Alignment Score 68574
+firstres = 1 lastres = 961
+FASTA file created!
+
+Fasta-Alignment file created    [results/ND1_nuc.aln]
+
+results/ND1.fasta clustalw2 -INFILE=results/ND1.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/ND1_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_CYTB      1114 bp
+Sequence 2: 1_CYTB      1114 bp
+Sequence 3: 2_CYTB      1114 bp
+Sequence 4: 3_CYTB      1114 bp
+Sequence 5: 4_CYTB      1114 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  98
+Sequences (1:3) Aligned. Score:  98
+Sequences (1:4) Aligned. Score:  91
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  91
+Sequences (2:5) Aligned. Score:  98
+Sequences (3:4) Aligned. Score:  91
+Sequences (3:5) Aligned. Score:  99
+Sequences (4:5) Aligned. Score:  90
+Guide tree file created:   [results/CYTB.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:21147
+Group 2: Sequences:   3      Score:21042
+Group 3: Sequences:   4      Score:20994
+Group 4: Sequences:   5      Score:20040
+Alignment Score 79952
+firstres = 1 lastres = 1114
+FASTA file created!
+
+Fasta-Alignment file created    [results/CYTB_nuc.aln]
+
+results/CYTB.fasta clustalw2 -INFILE=results/CYTB.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/CYTB_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_ND3        343 bp
+Sequence 2: 1_ND3        343 bp
+Sequence 3: 2_ND3        343 bp
+Sequence 4: 3_ND3        343 bp
+Sequence 5: 4_ND3        343 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  98
+Sequences (1:3) Aligned. Score:  98
+Sequences (1:4) Aligned. Score:  89
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  90
+Sequences (2:5) Aligned. Score:  99
+Sequences (3:4) Aligned. Score:  90
+Sequences (3:5) Aligned. Score:  99
+Sequences (4:5) Aligned. Score:  90
+Guide tree file created:   [results/ND3.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:6507
+Group 2: Sequences:   3      Score:6502
+Group 3: Sequences:   4      Score:6453
+Group 4: Sequences:   5      Score:6175
+Alignment Score 24827
+firstres = 1 lastres = 343
+FASTA file created!
+
+Fasta-Alignment file created    [results/ND3_nuc.aln]
+
+results/ND3.fasta clustalw2 -INFILE=results/ND3.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/ND3_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_ND4       1338 bp
+Sequence 2: 1_ND4       1338 bp
+Sequence 3: 2_ND4       1338 bp
+Sequence 4: 3_ND4       1338 bp
+Sequence 5: 4_ND4       1338 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  98
+Sequences (1:3) Aligned. Score:  98
+Sequences (1:4) Aligned. Score:  89
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  100
+Sequences (2:4) Aligned. Score:  89
+Sequences (2:5) Aligned. Score:  99
+Sequences (3:4) Aligned. Score:  89
+Sequences (3:5) Aligned. Score:  99
+Sequences (4:5) Aligned. Score:  89
+Guide tree file created:   [results/ND4.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:25422
+Group 2: Sequences:   3      Score:25289
+Group 3: Sequences:   4      Score:25244
+Group 4: Sequences:   5      Score:23785
+Alignment Score 95935
+firstres = 1 lastres = 1338
+FASTA file created!
+
+Fasta-Alignment file created    [results/ND4_nuc.aln]
+
+results/ND4.fasta clustalw2 -INFILE=results/ND4.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/ND4_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_ATP8       165 bp
+Sequence 2: 1_ATP8       165 bp
+Sequence 3: 2_ATP8       165 bp
+Sequence 4: 3_ATP8       165 bp
+Sequence 5: 4_ATP8       186 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  98
+Sequences (1:3) Aligned. Score:  98
+Sequences (1:4) Aligned. Score:  86
+Sequences (1:5) Aligned. Score:  95
+Sequences (2:3) Aligned. Score:  100
+Sequences (2:4) Aligned. Score:  87
+Sequences (2:5) Aligned. Score:  97
+Sequences (3:4) Aligned. Score:  87
+Sequences (3:5) Aligned. Score:  97
+Sequences (4:5) Aligned. Score:  84
+Guide tree file created:   [results/ATP8.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:3068
+Group 2: Sequences:   3      Score:3084
+Group 3: Sequences:   4      Score:3056
+Group 4: Sequences:   5      Score:2790
+Alignment Score 11790
+firstres = 1 lastres = 187
+FASTA file created!
+
+Fasta-Alignment file created    [results/ATP8_nuc.aln]
+
+results/ATP8.fasta clustalw2 -INFILE=results/ATP8.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/ATP8_nuc.aln
+
+
+
+ CLUSTAL 2.1 Multiple Sequence Alignments
+
+
+Sequence format is Pearson
+Sequence 1: 0_ND2       1030 bp
+Sequence 2: 1_ND2       1030 bp
+Sequence 3: 2_ND2       1030 bp
+Sequence 4: 3_ND2       1030 bp
+Sequence 5: 4_ND2       1030 bp
+Start of Pairwise alignments
+Aligning...
+
+Sequences (1:2) Aligned. Score:  98
+Sequences (1:3) Aligned. Score:  98
+Sequences (1:4) Aligned. Score:  88
+Sequences (1:5) Aligned. Score:  98
+Sequences (2:3) Aligned. Score:  99
+Sequences (2:4) Aligned. Score:  89
+Sequences (2:5) Aligned. Score:  98
+Sequences (3:4) Aligned. Score:  89
+Sequences (3:5) Aligned. Score:  99
+Sequences (4:5) Aligned. Score:  89
+Guide tree file created:   [results/ND2.dnd]
+
+There are 4 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:19389
+Group 2: Sequences:   3      Score:19395
+Group 3: Sequences:   4      Score:19406
+Group 4: Sequences:   5      Score:18298
+Alignment Score 73868
+firstres = 1 lastres = 1030
+FASTA file created!
+
+Fasta-Alignment file created    [results/ND2_nuc.aln]
+
+results/ND2.fasta clustalw2 -INFILE=results/ND2.fasta -ALIGN -OUTPUT=FASTA -OUTFILE=results/ND2_nuc.aln

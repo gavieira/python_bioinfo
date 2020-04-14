@@ -1,0 +1,28 @@
+A partir de um arquivos genbanks:
+
+- Separar todas as CDS's dele.
+- Calcular o codon usage.
+
+- Pegar a sequencia inteira (ou só os tRNAs)
+- Usar o trnascan-SE para averiguar o anticodon
+
+Plotar uma tabela com todos os campos do codon usage para cada espécie:
+
+- Species
+
+- Translation table
+
+- Aminoacid (Three-letter code)
+
+- Codon for that aminoacid
+
+- Has all 22 tRNAs? YES or NO
+
+- Has anticodon in mito tRNAs? YES or EMPTY VALUE
+
+- Number of occurrences of that codon in the genes 
+
+- \1000 - (number_of_codon_occurences / total number of aa - including start_stop_codons) * 1000
+
+- Fraction:
+codon occurences / sum of all codon occurences for that aa

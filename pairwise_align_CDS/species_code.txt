@@ -1,0 +1,5 @@
+0 BDIP_ARG
+1 BPUB_RS
+2 Bothrops_diporus
+3 Bothrops_jararaca
+4 Bothrops_pubescens

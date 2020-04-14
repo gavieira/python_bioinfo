@@ -1,0 +1,5 @@
+per_thousand calculation:
+(number_of_codon_occurences / total number of aa - including start_stop_codons) * 1000
+
+fraction:
+codon occurences / sum of all codon occurences for that aa 

@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(description="This script removes annotationless
 parser.add_argument("trinotate_report", type=str, metavar="fasta", help="Trinotate report in .csv")
 args = parser.parse_args()
 
-df = dd.read_csv(args.trinotate_report, usecols=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])
+df = dd.read_csv(args.trinotate_report, sep='\t', usecols=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])
 
 df_computed = df[(df.sprot_Top_BLASTX_hit != '.') | (df.sprot_Top_BLASTP_hit != '.') | (df.Pfam != '.') ].compute() #Retains only columns with valid hits
 

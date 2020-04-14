@@ -1,0 +1,88 @@
+
+
+
+
+
+
+                                 ..........................                                      
+ ooooooooooooooooooooooooooooo        CURRENT SETTINGS        ooooooooooooooooooooooooooooooooooo
+                                 ..........................                                      
+
+                . Sequence filename:				 all_nuc.phy
+                . Data type:					 dna
+                . Alphabet size:				 4
+                . Sequence format:				 interleaved
+                . Number of data sets:				 1
+                . Nb of bootstrapped data sets:			 100
+                . Compute approximate likelihood ratio test:	 no
+                . Model name:					 GTR
+                . Proportion of invariable sites:		 0.000000
+                . Number of subst. rate categs:			 4
+                . Gamma distribution parameter:			 4.000000
+                . 'Middle' of each rate class:			 mean
+                . Nucleotide equilibrium frequencies:		 ML
+                . Optimise tree topology:			 yes
+                . Tree topology search:				 NNIs
+                . Starting tree:				 BioNJ
+                . Add random input tree:			 no
+                . Optimise branch lengths:			 yes
+                . Optimise substitution model parameters:	 yes
+                . Run ID:					 none
+                . Random seed:					 1566313704
+                . Subtree patterns aliasing:			 no
+                . Version:					 20120412
+
+ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+
+
+. 91 patterns found (out of a total of 11326 sites). 
+
+. 10058 sites without polymorphism (88.80%).
+
+. Computing pairwise distances...
+
+. Building BioNJ tree...
+. Refining the input tree...
+
+. Maximizing likelihood (using NNI moves)...
+
+. (    0 sec) [    -21086.1424] [GTR parameters     ]
+. (    0 sec) [    -21082.9220] [Nucleotide freqs.  ]
+. (    0 sec) [    -21082.9220] [Topology           ][# nnis=  0]
+. (    0 sec) [    -21081.6610] [Topology           ][# nnis=  0]
+. (    0 sec) [    -21081.5851] [Topology           ]
+. (    0 sec) [    -21081.5851] [Branch lengths     ]
+. (    0 sec) [    -21081.4376] [GTR parameters     ]
+. (    0 sec) [    -21081.4345] [Nucleotide freqs.  ]
+. (    0 sec) [    -21081.4345] [Branch lengths     ]
+. (    0 sec) [    -21081.4328] [GTR parameters     ]
+. (    0 sec) [    -21081.4328] [Nucleotide freqs.  ]
+. (    0 sec) [    -21081.4328] [Branch lengths     ]
+. (    0 sec) [    -21081.4328] [GTR parameters     ]
+. (    0 sec) [    -21081.4328] [Nucleotide freqs.  ]
+. (    0 sec) [    -21081.4328] [GTR parameters     ]
+. (    0 sec) [    -21081.4328] [Nucleotide freqs.  ]
+
+. Checking for NNIs, optimizing five branches...
+
+
+
+. Log likelihood of the current tree: -21081.432818.
+
+. Launch bootstrap analysis on the most likely tree...
+
+
+. Non parametric bootstrap analysis 
+
+  [....................]   20/ 100
+  [....................]   40/ 100
+  [....................]   60/ 100
+  [....................]   80/ 100
+  [....................]  100/ 100
+  
+. Printing the most likely tree in file 'all_nuc.phy_phyml_tree.txt'...
+
+. Time used 0h0m12s
+
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo

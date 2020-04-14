@@ -1,0 +1,1 @@
+(BDIP_ARG:0.00684991,Bothrops_jararaca:0.10513837,(Bothrops_pubescens:0.00491763,(BPUB_RS:0.00171386,Bothrops_diporus:0.00156717)100:0.00321373)100:0.00644572);
