@@ -29,6 +29,7 @@ class fasta_parser():
             for record in self.create_seqio_object():
                 if record.id == hit:
                     yield record.format('fasta')
+                    break
 
     def get_seq_in_blast_by_id(self, blast_result):
         for query in SearchIO.parse(blast_result, 'blast-tab'):
@@ -37,6 +38,7 @@ class fasta_parser():
                     if hit.id == record.id:
                         #print(hit.id, record.id)
                         yield record.format('fasta')
+                        break
 
 
 def arguments():
