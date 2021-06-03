@@ -23,13 +23,19 @@ class fasta_parser():
         for query in SearchIO.parse(blast_result, 'blast-tab'):
             return query.hit_keys
 
+    def extract_hits_unordered(self, blast_result):
+        hits = self.get_hit_ids(blast_result)
+        for record in self.create_seqio_object():
+            if record.id in hits:
+                yield record.format('fasta')
+                hits.remove(record.id)
+
     def extract_hits(self, blast_result):
         hits = self.get_hit_ids(blast_result)
         for hit in hits: #This for keeps the sequences sorted by best score
             for record in self.create_seqio_object():
                 if record.id == hit:
                     yield record.format('fasta')
-                    break
 
     def get_seq_in_blast_by_id(self, blast_result):
         for query in SearchIO.parse(blast_result, 'blast-tab'):
@@ -38,7 +44,6 @@ class fasta_parser():
                     if hit.id == record.id:
                         #print(hit.id, record.id)
                         yield record.format('fasta')
-                        break
 
 
 def arguments():
@@ -53,5 +58,6 @@ if __name__ == '__main__':
     args = arguments()
     parser = fasta_parser(args.fasta)
     #for record in parser.get_seq_in_blast_by_id(args.blast):
-    for record in parser.extract_hits(args.blast):
+    #for record in parser.extract_hits(args.blast):
+    for record in parser.extract_hits_unordered(args.blast):
         print(record, end='')
