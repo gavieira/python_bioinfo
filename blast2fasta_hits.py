@@ -2,7 +2,7 @@
 # coding: utf-8
 
 from Bio import SeqIO
-from Bio import SearchIO
+#from Bio import SearchIO ##SearchIO only storees up to 500 hits. Did not use it because of this limitation
 import argparse
 
 
@@ -20,8 +20,11 @@ class fasta_parser():
                 yield record.format('fasta')
     
     def get_hit_ids(self, blast_result):
-        for query in SearchIO.parse(blast_result, 'blast-tab'):
-            return query.hit_keys
+        hitlist = []
+        with open(blast_result) as blast:
+            for line in blast:
+                hitlist.append(line.split("\t")[1]) #Second column (subjectid) 
+        return hitlist
 
     def extract_hits_unordered(self, blast_result):
         hits = self.get_hit_ids(blast_result)
@@ -32,10 +35,9 @@ class fasta_parser():
 
     def extract_hits(self, blast_result):
         hits = self.get_hit_ids(blast_result)
-        for hit in hits: #This for keeps the sequences sorted by best score
-            for record in self.create_seqio_object():
-                if record.id == hit:
-                    yield record.format('fasta')
+        index = SeqIO.index(self.fasta, "fasta")
+        for hit in hits:
+            yield index[hit].format("fasta")
 
     def get_seq_in_blast_by_id(self, blast_result):
         for query in SearchIO.parse(blast_result, 'blast-tab'):
@@ -58,6 +60,6 @@ if __name__ == '__main__':
     args = arguments()
     parser = fasta_parser(args.fasta)
     #for record in parser.get_seq_in_blast_by_id(args.blast):
-    #for record in parser.extract_hits(args.blast):
-    for record in parser.extract_hits_unordered(args.blast):
+    for record in parser.extract_hits(args.blast):
+    #for record in parser.extract_hits_unordered(args.blast):
         print(record, end='')
